@@ -14,6 +14,7 @@ PyPDF2==2.10.5
 # PyPDF2==3.0.1
 python-dotenv==1.0.1
 spacy==3.7.4
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
 SpeechRecognition==3.10.3
 streamlit==1.32.2
 wikipedia==1.4.0

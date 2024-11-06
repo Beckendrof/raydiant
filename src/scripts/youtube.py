@@ -9,7 +9,9 @@ from dotenv import load_dotenv
 import spacy
 
 load_dotenv()
-nlp = spacy.load("en_core_web_sm")
+
+import en_core_web_sm
+nlp = en_core_web_sm.load()
 
 def save_frame_as_image(frame, output_path):
     cv2.imwrite(output_path, frame)
