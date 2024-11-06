@@ -1,4 +1,4 @@
-/src/data/img/*
+/data/img/*
 /conversation_images
 */__pycache__
-/src/data/conversation_chain.pickle
+/data/conversation_chain.pickle
