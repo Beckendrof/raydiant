@@ -5,7 +5,6 @@ import streamlit as st
 from PIL import Image
 from PyPDF2 import PdfReader
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
