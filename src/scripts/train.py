@@ -145,6 +145,7 @@ def search_keywords(question, text_per_page, pdf_name, output_dir):
 
 def save_image(pdf_path, output_dir):
     pdf_document = fitz.open(pdf_path)
+    os.makedirs(output_dir, exist_ok=True)
     for page_num in range(len(pdf_document)):
         page = pdf_document.load_page(page_num)
         pix = page.get_pixmap()
