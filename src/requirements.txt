@@ -20,4 +20,4 @@ streamlit==1.32.2
 wikipedia==1.4.0
 youtube_transcript_api==0.6.2
 yt_dlp==2024.11.4
-sentence-transofrmers==2.6.1
+sentence-transformers==2.6.1
