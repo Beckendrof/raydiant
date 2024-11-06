@@ -113,9 +113,9 @@ def get_conversation_chain(vectorstore):
         memory=memory
     )
     
-    with open("data/conversation_chain.pickle", 'wb') as f:
+    with open("beckendrof/raydiant/master/data/conversation_chain.pickle", 'wb') as f:
         pickle.dump(conversation_chain, f)
-        print("Conversation chain saved to file:", "data/conversation_chain.pickle")
+        print("Conversation chain saved to file:", "beckendrof/raydiant/master/data/conversation_chain.pickle")
 
     return conversation_chain
 
@@ -155,7 +155,7 @@ def main():
     # pdf_path = "data/Lecture_slides.pdf"
     # output_dir = "data/img"
     # save_image(pdf_path, output_dir)
-    with open('data/piazza_data.txt', 'r', encoding='utf-8') as file:
+    with open('beckendrof/raydiant/master/data/piazza_data.txt', 'r', encoding='utf-8') as file:
         raw_text = file.read()
 
     text_chunks = get_text_chunks(raw_text)
