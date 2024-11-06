@@ -5,6 +5,7 @@ from audio_recorder_streamlit import audio_recorder
 from scripts.youtube import *
 from scripts.search_keywords import *
 from scripts.train import main as train_main
+from scripts.train import *
 import shutil
 import base64
 import pickle
