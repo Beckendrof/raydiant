@@ -92,7 +92,7 @@ def img_to_base64(image_path):
     
 @st.cache_data(show_spinner=False)
 def read_pdf(my_pdf):
-    with open('beckendrof/raydiant/master/data/piazza_data.txt', 'r', encoding='utf-8') as file:
+    with open('data/piazza_data.txt', 'r', encoding='utf-8') as file:
         piazza_text = file.read()
     pdf_text = get_pdf_text(my_pdf)
     raw_text = piazza_text + pdf_text
@@ -117,7 +117,7 @@ def main():
     if "selected_chat" not in st.session_state:
         st.session_state.selected_chat = 0
 
-    img_path = "beckendrof/raydiant/master/data/logo.png"
+    img_path = "data/logo.png"
     img_base64 = img_to_base64(img_path)
     st.sidebar.markdown(
         f'<img src="data:image/png;base64,{img_base64}" class="cover-glow">',
@@ -143,7 +143,7 @@ def main():
     my_upload = st.sidebar.file_uploader("", type=["pdf"], label_visibility="collapsed", accept_multiple_files = True)
 
     if st.session_state.chats[st.session_state.selected_chat]["conversation"] is None:
-        st.session_state.chats[st.session_state.selected_chat]["conversation"] = load_conversation_chain("beckendrof/raydiant/master/data/conversation_chain.pickle")
+        st.session_state.chats[st.session_state.selected_chat]["conversation"] = load_conversation_chain("data/conversation_chain.pickle")
 
     if my_upload is not None:
         if not st.session_state.chats[st.session_state.selected_chat]["chat_history"]:
@@ -153,7 +153,7 @@ def main():
 
     audio_bytes = audio_recorder("", "")
     if audio_bytes:
-        audio_location = "beckendrof/raydiant/master/data/audio_file.wav"
+        audio_location = "data/audio_file.wav"
         with open(audio_location, "wb") as f:
             f.write(audio_bytes)
         user_question = transcribe_audio_to_text(audio_location)
