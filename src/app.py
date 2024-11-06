@@ -113,11 +113,10 @@ def main():
     st.write(css, unsafe_allow_html=True)
 
     st.title("Raydiant Teaching Assistant")
+    st.write("Current working directory:", os.getcwd())
 
     if "selected_chat" not in st.session_state:
         st.session_state.selected_chat = 0
-
-    print(os.getcwd())
     img_path = "data/logo.png"
     img_base64 = img_to_base64(img_path)
     st.sidebar.markdown(
