@@ -10,7 +10,7 @@ pdfkit==1.0.0
 piazza_api==0.14.1
 Pillow==11.0.0
 PyPDF2==2.10.5
-PyPDF2==3.0.1
+# PyPDF2==3.0.1
 python-dotenv==1.0.1
 spacy==3.7.4
 SpeechRecognition==3.10.3
