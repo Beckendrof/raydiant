@@ -1,5 +1,6 @@
 import os
 import fitz
+from pymupdf import fitz
 import spacy
 import networkx as nx
 from difflib import SequenceMatcher
