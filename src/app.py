@@ -4,7 +4,7 @@ from htmlTemplates import css, bot_template, user_template
 from audio_recorder_streamlit import audio_recorder
 from scripts.youtube import *
 from scripts.search_keywords import *
-from scripts.train import *
+from scripts.train import main as train_main
 import shutil
 import base64
 import pickle
@@ -102,6 +102,10 @@ def read_pdf(my_pdf):
 
     
 def main():
+    if 'train_done' not in st.session_state:
+        train_main()  # Call the function that initializes your training logic
+        st.session_state['train_done'] = True 
+
     st.set_page_config(
         page_title="Chat",
         page_icon=":teacher:",
