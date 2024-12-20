@@ -12,3 +12,5 @@ streamlit run src/app.py
 python3 src/scripts/scrape.py
 python3 src/scripts/train.py
 ```
+
+Future plans include adding support for more data sources.
