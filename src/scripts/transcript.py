@@ -26,8 +26,3 @@ with open(text_file, "w") as file:
 
 print("Transcript saved to", text_file)
 
-
-
-
-   
-
